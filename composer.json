@@ -1,0 +1,23 @@
+{
+    "name": "tate/bulksms",
+    "description": "A simple PHP wrapper class for http://www.bulksmsweb.com/ for sending sms messages",
+    "type": "package",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "license": "mit",
+    "authors": [
+        {         
+            "name": "Tatenda Munenge",
+            "email": "tatemunenge@gmail.com",
+            "homepage": "http://tatendamunenge.tech"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "tate\\bulksms\\": "src/"
+        }
+    }
+}
+
