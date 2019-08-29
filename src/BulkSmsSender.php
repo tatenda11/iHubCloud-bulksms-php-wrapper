@@ -155,7 +155,7 @@ class BulkSmsSender
 	{
 		try
 		{
-			$ws_response = @file_get_contents($ws_str);
+			$ws_response = @file_get_contents($url);
         	$this->server_responce = json_decode($ws_response, true);
 		}
 		catch(\Exception $e)
