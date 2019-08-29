@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '../vendor/autoload.php';
+require_once  '../vendor/autoload.php';
 
 use tate\bulksms\BulkSmsSender;
 
@@ -27,9 +27,24 @@ $recepients = array(
 
 $sms->add_recepient($recepients, true);
 
+// sms groups if you have any
+
+$sms->add_group_recepients('#devteam');
+
+// adding muiltiple groups
+
+$groups = array(
+	'#saleTeam',
+	'#marketingteam',
+	'#customers'
+);
+
+$sms->add_group_recepients($groups);
+
+
 //setting the message
 
-$sms->$sms->set_message("ndeipi wangu"); //set message method
+$sms->$sms->set_message("important notice team"); //set message method
 
 //sending the message
 
@@ -53,5 +68,4 @@ try{
 catch(\Exception $e){
 	echo $e->getMessage();
 }
-
-
+?>
